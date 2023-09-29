@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard-Thiruvizh Kondatam Events</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <div class="new-stic w-100">
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3"> Admin <sup></sup></div>
+                </a>
+
+                <!-- Divider -->
+                <!-- <hr class="sidebar-divider my-0"> -->
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" href="add-product.html" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Products</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Our Products</h6>
+                            <a class="collapse-item" href="add-admin.html">Add</a>
+                            <a class="collapse-item" href="view.html">View</a>
+                        </div>
+                    </div>
+                </li>
+            
+                <li class="nav-item active">
+                    <a class="nav-link" href="order.html">
+                        <i class="fa-solid fa-chalkboard"></i>
+                        <span>Orders </span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="view-leads.html">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Pending</span>
+                    </a>
+                </li>
+
+
+            </div>
+
+
+            <!-- Divider -->
+            <!-- <hr class="sidebar-divider d-none d-md-block"> -->
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div> -->
+
+            <!-- Sidebar Message -->
+            <!-- <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            </div> -->
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar fixed-top navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link  rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+
+
+                        <!-- Nav Item - Messages -->
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">THIRUVIZHA KONDATAM
+                                    EVENTS</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <!-- <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a> -->
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#changepass">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid ">
+
+                    <!-- Page Heading -->
+                    <div class="lead-container d-flex justify-content-between mb-4">
+                        <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                        <button class="add-lead submit mAdmin-btn" id="addLead">Add Lead</button>
+                    </div>
+
+                    <section class="model-section">
+                        <div class="model-form">
+                            <h2>Add Lead Hear</h2>
+                            <form action="">
+                                <div class="form-sNo">
+                                    <label for="no">No :</label>
+                                    <input type="text" class="form-control" id="no" placeholder="no">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="date">Date :</label>
+                                    <input type="date" class="form-control" id="date" placeholder="Date">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="source">Source :</label>
+                                    <input type="text" class="form-control" id="source" placeholder="Source">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="Name">Date :</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="Name">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="sub-name">For Who :</label>
+                                    <input type="text" class="form-control" id="sub-name" placeholder="For Who">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="mo-num">Mobile Number :</label>
+                                    <input type="number" class="form-control" id="mo-num" placeholder="Mobile Number">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="altMo-num">Alt Mobile Number :</label>
+                                    <input type="number" class="form-control" id="altMo-num"
+                                        placeholder="Alternate Mobile Number">
+                                </div>
+
+                                <div class="form-sNo">
+                                    <label for="function">Function :</label>
+                                    <input type="text" class="form-control" id="function" placeholder="function">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="fun-date">Function Date :</label>
+                                    <input type="date" class="form-control" id="fun-date" placeholder="Function date">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="requirement">Requirement :</label>
+                                    <div class="requirement-check">
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="photography" placeholder="Photography">
+                                            <label for="photography">Photography</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="catering" placeholder="catering">
+                                            <label for="catering">Catering</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="decor" placeholder="decor">
+                                            <label for="decor">Decor</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="makeup" placeholder="Makeup">
+                                            <label for="makeup">Makeup</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="others" placeholder="others">
+                                            <label for="others">Others</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="location">Location :</label>
+                                    <input type="text" class="form-control" id="location" placeholder="location">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="notes">Notes :</label>
+                                    <textarea name="" class="form-control" id="notes" cols="30" rows="5"
+                                        placeholder="Notes"></textarea>
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="todo">To Do :</label>
+                                    <div class="requirement-check">
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="sample" placeholder="sample">
+                                            <label for="sample">Send Sample</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="follow1" placeholder="follow1">
+                                            <label for="follow1">Follow1</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="sendQuatation" placeholder="sendQuatation">
+                                            <label for="sendQuatation">Send Quatation</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="follow2" placeholder="follow2">
+                                            <label for="follow2">Follow2</label>
+                                        </div>
+                                        <div class="checkbox-content">
+                                            <input type="checkbox" id="follow3" placeholder="Follow3">
+                                            <label for="follow3">Follow3</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="remainder">Remainder :</label>
+                                    <input type="datetime-local" class="form-control" id="remainder"
+                                        placeholder="remainder">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="meeting">Meeting :</label>
+                                    <input type="datetime-local" class="form-control" id="meeting"
+                                        placeholder="meeting">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="followed-by">Followed By :</label>
+                                    <input type="text" class="form-control" id="followed-by" placeholder="followed-by">
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="">Status By :</label>
+                                    <div class="form-radio">
+                                        <div class="status-radios">
+                                            <input type="radio" id="on-followup" name="status"
+                                                placeholder="On-Followups">
+                                            <label for="on-followup">On-Followups</label>
+                                        </div>
+                                        <div class="status-radios">
+                                            <input type="radio" id="denied" class="denied" name="status" placeholder="denied">
+                                            <label for="denied">Denied</label>
+                                        </div>
+                                        <div class="status-radios">
+                                            <input type="radio" id="confirmed" name="status" placeholder="confirmed">
+                                            <label for="confirmed">Confirmed</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-sNo">
+                                    <label for="price">Price :</label>
+                                    <input type="number" class="form-control" id="price" placeholder="Price">
+                                </div>
+
+                                <div class="form-sNo">
+                                    <button class="Close mAdmin-btn" id="f-close">Close</button>
+                                    <button class="submit mAdmin-btn">Submit</button>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </section>
+
+                    <section class="denied-popu">
+
+                        <div class="denied-container">
+                            <h2>Denied</h2>
+                            <form>
+                                <div class="denied-content">
+                                    <div class="denied-details">
+                                        <p>Lead Date :</p>
+                                        <span class="denied-lead-date">01/09/2023</span>
+                                    </div>
+                                    <div class="denied-details">
+                                        <p>Source :</p>
+                                        <span class="denied-source">Instagram</span>
+                                    </div>
+                                    <div class="denied-details">
+                                        <p>Name :</p>
+                                        <span class="denied-name">Kamal Hassan</span>
+                                    </div>
+                                    <div class="denied-details">
+                                        <p>For Who :</p>
+                                        <span class="denied-who">Daughter</span>
+                                    </div>
+                                    <div class="denied-details">
+                                        <p>Contact :</p>
+                                        <span class="denied-contact">+919876543210</span>
+                                    </div>
+                                    <div class="denied-details">
+                                        <p>Function Date :</p>
+                                        <span class="denied-fun-date">01/09/2023</span>
+                                    </div>
+                                </div>
+                                <div class="denied-reason-container">
+                                    <div class="denied-reason">
+                                        <h5>Reason</h5>
+
+                                        <div class="denied-checkbox">
+                                            <input type="checkbox" id="low-bugjet">
+                                            <label for="low-bugjet"> Low Budjet</label>
+                                        </div>
+                                        <div class="denied-checkbox">
+                                            <input type="checkbox" id="low-count">
+                                            <label for="low-count"> Low Count</label>
+                                        </div>
+                                        <div class="denied-checkbox">
+                                            <input type="checkbox" id="other-side">
+                                            <label for="other-side"> Other Side Booking</label>
+                                        </div>
+                                        <div class="denied-checkbox">
+                                            <input type="checkbox" id="no-response">
+                                            <label for="no-response"> No Response</label>
+                                        </div>
+                                        <div class="denied-checkbox">
+                                            <input type="checkbox" id="improper">
+                                            <label for="improper"> Improper Follow by Other </label>
+                                        </div>
+                                    </div>
+                                    <div class="denied-reason">
+                                        <h5>Denied Date</h5>
+                                        <input class="form-control" type="date">
+                                    </div>
+                                   
+                                </div>
+                                <div class="denied-button mt-4">
+                                    <button class="Close mAdmin-btn" id="denied-close">Close</button>
+                                    <button class="submit mAdmin-btn">Submit</button>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </section>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header d-flex py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Leads Date</th>
+                                            <th>Source</th>
+                                            <th>Name</th>
+                                            <th>For Who</th>
+                                            <th>Contact</th>
+                                            <th>Alt Contact</th>
+                                            <th>Function</th>
+                                            <th>Function Date</th>
+                                            <th>Requirement</th>
+                                            <th>Location</th>
+                                            <th>Notes</th>
+                                            <th>To Do</th>
+                                            <th>Reminder</th>
+                                            <th>Meeting</th>
+                                            <th>Followed By</th>
+                                            <th>Status</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Leads Date</th>
+                                            <th>Source</th>
+                                            <th>Name</th>
+                                            <th>For Who</th>
+                                            <th>Contact</th>
+                                            <th>Alt Contact</th>
+                                            <th>Function</th>
+                                            <th>Function Date</th>
+                                            <th>Requirement</th>
+                                            <th>Location</th>
+                                            <th>Notes</th>
+                                            <th>To Do</th>
+                                            <th>Reminder</th>
+                                            <th>Meeting</th>
+                                            <th>Followed By</th>
+                                            <th>Status</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>4/9/2023</td>
+                                            <td>Instagram</td>
+                                            <td>Govindh</td>
+                                            <td>Son</td>
+                                            <td>987654321</td>
+                                            <td>987654321</td>
+                                            <td>Wedding</td>
+                                            <td>10/9/2023</td>
+                                            <td>Photography</td>
+                                            <td>Madurai</td>
+                                            <td>Notes</td>
+                                            <td>Follow 2</td>
+                                            <td>8/9/2023, 9:30AM, Content</td>
+                                            <td>8/9/2023, 9:30AM, Madurai</td>
+                                            <td>Saranya</td>
+                                            <td>Confirmed</td>
+                                            <td>200000</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy;2023 All Rights Reserved by <a href="https://honeyiconics.com/"
+                                target="_blank" class="w">Honeyiconics</a>
+
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- change passwor model -->
+    <div class="modal fade" id="changepass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3 needs-validation" novalidate>
+
+                        <div class="col-md-12">
+                            <label for="validationCustom03" class="form-label">Old Password</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please enter your old Password.
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-2">
+                            <label for="validationCustom05" class="form-label">New Password</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                                Please enter your new Password.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <button class="btn btn-success" type="submit">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+
+
+    <!-- ₹2,90,000 -->
+
+
+    <!-- js  -->
+
+    <script src="js/script.js"></script>
+
+   
+
+
+</body>
+
+</html>
