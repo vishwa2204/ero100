@@ -302,6 +302,90 @@ p {
 }
 
 
+/* Mega Menu  */
+
+
+/* Mega Menu  */
+
+/* Mega Menu  */
+
+.menu-area {
+    position: static !important;
+    height: auto !important;
+}
+
+.mega-area {
+    position: absolute;
+    width: 80%;
+    left: 50% !important;
+    top: 0;
+    transform: translate(-50%, 0);
+    background-color: var(--color) !important;
+    padding: 2% !important;
+    filter: drop-shadow(0 10px 10px var(--black));
+}
+
+.mega-area p {
+    color: var(--black);
+    font-size: 14px;
+}
+
+
+.navbar .row .col-lg-6 {
+    padding: 0px !important;
+    margin-bottom: 4%;
+
+}
+
+.counselling-program{
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-one .row {
+    width: 100% !important;
+}
+
+
+.mega-area .num h6 {
+    color: var(--color) !important;
+    font-weight: 700;
+}
+
+/* 
+.menu-area:hover .mega-area {
+    display: block !important;
+    top: 80px;
+} */
+.mega-area .num h6 {
+    color: var(--c2) !important;
+    font-weight: 900;
+    margin-bottom: 10%;
+    font-size: 20px;
+}
+
+.counselling-program a {
+   
+    text-decoration: none;
+    transition: 1s;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+
+
+.counselling-program a .counselling-title {
+    color: var(--white) !important;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+.counselling-program a .counselling-title span {
+    color: var(--color);
+}
+
 
 /* Navbar End */
 
@@ -1189,7 +1273,7 @@ hr {
 
 /* Order Info  */
 
-.order{
+.order {
     margin-bottom: 5%;
 }
 
@@ -1214,12 +1298,12 @@ hr {
     font-weight: 700;
 }
 
-.order-title h2{
+.order-title h2 {
     color: var(--color);
     font-weight: 700;
 }
 
-.order-title h2 span{
+.order-title h2 span {
     color: var(--c2);
     font-weight: 700;
 }
@@ -1544,6 +1628,17 @@ footer {
 
 @media screen and (max-width:991px) {
 
+    .mega-area {
+        position: absolute;
+        width: 100%;
+        left: 0% !important;
+        top: 0;
+        transform: translate(-0%, 0);
+        padding: 3% !important;
+        text-align: justify !important;
+        filter: drop-shadow(0 0 10px var(--white));
+    }
+
     .top-contact {
         width: 50%;
         height: auto;
@@ -1601,6 +1696,7 @@ footer {
         justify-content: space-between;
     }
 
+   
 
     .mini-shop-container .mini-boxs {
         width: 100%;
@@ -1753,6 +1849,15 @@ footer {
         justify-content: space-between;
     }
 
+    .mega-area {
+        position: absolute;
+        width: 100%;
+        left: 0% !important;
+        top: 0;
+        transform: translate(-0%, 0);
+        padding: 1% !important;
+        filter: drop-shadow(0 0 10px var(--white));
+    }
 
     .mini-shop-container .mini-boxs {
         width: 100%;
