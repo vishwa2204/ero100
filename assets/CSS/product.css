@@ -20,6 +20,16 @@
   --red: rgb(255, 38, 38);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
 
 
 .swiper {
@@ -202,6 +212,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .product-images {
@@ -331,4 +342,47 @@ body {
 /* product-similar */
 .product-similar .daily-sales-products{
   width: 100%;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.img-zoom-container {
+  transition: 0s !important;
+  position: relative;
+}
+
+.img-zoom-container img{
+  transition: 0s !important;
+  object-fit: contain;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  transition: 0s !important;
+  width: 40px;
+  height: 40px;
+}
+
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 0s !important;
+  right: 0;
+}
+
+
+.img-zoom-lens:hover~.img-zoom-result {
+  transition: 0s !important;
+  opacity: 1 !important;
 }

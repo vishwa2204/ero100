@@ -102,7 +102,7 @@ function order() {
 
 // <!--//////////////////////////////// Number Counte //////////////////// -->
 
- 
+
 
 // Button Increase and Decrease 
 
@@ -120,6 +120,3 @@ function minusFunction39() {
         numberInput.stepDown(1);
     }
 }
-
-
-

@@ -187,7 +187,7 @@ form{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-form button{
+form .submit-button{
     width: 50%;
     background-color: var(--color);
     border: none;
