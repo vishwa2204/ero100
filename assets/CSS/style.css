@@ -181,6 +181,23 @@ p {
     justify-content: center;
     text-decoration: none;
     border-radius: 50%;
+    position: relative;
+}
+
+.nav-icons .nav-images .wish-count{
+    width: 20px;
+    height: 20px;
+    background-color: var(--c2);
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    font-weight: 600;
+    font-size: 15px;
+    right: 0;
 }
 
 .nav-icons .nav-images i {
@@ -386,6 +403,9 @@ p {
     color: var(--color);
 }
 
+.nav-images{
+    position: relative;
+}
 
 /* Navbar End */
 
