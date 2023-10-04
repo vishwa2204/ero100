@@ -652,9 +652,6 @@ body {
     display: none;
   }
 
-  .navbar {
-    background-color: var(--c1);
-  }
 
   .logo {
     width: 155px;
