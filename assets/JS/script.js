@@ -122,3 +122,16 @@ function minusFunction39() {
 }
 
 
+// Filter Btn For Category 
+
+let filterOn = document.querySelector('#filterBtn');
+let filterClose = document.querySelector('#cte-close');
+let filterContainer = document.querySelector('.category-filter');
+
+filterOn.addEventListener('click', () => {
+    filterContainer.classList.add('filter-active');
+});
+
+filterClose.addEventListener('click', () => {
+    filterContainer.classList.remove('filter-active');
+})
