@@ -31,6 +31,9 @@
   transition: all 0.2s linear;
 }
 
+.navbar{
+  background-color: var(--white);
+}
 
 .swiper {
   width: 100%;
