@@ -184,7 +184,7 @@ p {
     position: relative;
 }
 
-.nav-icons .nav-images .wish-count{
+.nav-icons .nav-images .wish-count {
     width: 20px;
     height: 20px;
     background-color: var(--c2);
@@ -354,7 +354,7 @@ p {
 
 }
 
-.counselling-program{
+.counselling-program {
     display: flex;
     flex-direction: column;
 }
@@ -382,7 +382,7 @@ p {
 }
 
 .counselling-program a {
-   
+
     text-decoration: none;
     transition: 1s;
     font-size: 15px;
@@ -403,7 +403,7 @@ p {
     color: var(--color);
 }
 
-.nav-images{
+.nav-images {
     position: relative;
 }
 
@@ -1554,7 +1554,17 @@ footer {
 
 
 
+@media screen and (max-width:991px) {
+    .nav-icons {
+        width: 30% !important;
+        height: 100% !important;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: space-between;
 
+    }
+}
 
 @media screen and (max-width:700px) {
 
@@ -1698,6 +1708,8 @@ footer {
         font-weight: 700;
     }
 
+
+
 }
 
 
@@ -1716,7 +1728,7 @@ footer {
         justify-content: space-between;
     }
 
-   
+
 
     .mini-shop-container .mini-boxs {
         width: 100%;

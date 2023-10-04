@@ -507,6 +507,29 @@
 
 
 
+        // carousel intervel 
+        let scrollArrow = document.querySelector(".up-arrow");
+
+        window.addEventListener('scroll', () => {
+
+            const scrollY = window.scrollY;
+            const scrollThreshold = 0;
+
+
+
+
+            if (scrollY > scrollThreshold) {
+
+                scrollArrow.style.top = "90%";
+
+            } else {
+                scrollArrow.style.top = "-20%";
+            }
+
+        });
+
+
+
     </script>
 
 
