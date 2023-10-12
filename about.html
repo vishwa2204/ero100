@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +22,10 @@
     <!-- fontawesome elements -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
 
 
-
-    <!-- top section Start -->
-
+    
     <section class="top-section">
         <div class="top-contact">
             <a href="https://www.youtube.com/watch?v=BT-8TL_S9nw&t=21s" class="top-1">
@@ -68,7 +64,6 @@
     <!-- Navbar Start -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/Images/LOGO/logo1.png" alt="">
@@ -77,14 +72,17 @@
                 <div class="nav-icons n2 d-lg-none">
                     <div class="nav-images" id="search-icon">
                         <i class="fas fa-search"></i>
+
                     </div>
                     <a href="wishlist.html" class="nav-images">
                         <i class="fas fa-heart"></i>
                         <span class="wish-count">0</span>
+
                     </a>
                     <a href="cart.html" class="nav-images">
-                        <span class="wish-count">0</span>
                         <i class="fas fa-shopping-cart"></i>
+                        <span class="wish-count">0</span>
+
                     </a>
 
                 </div>
@@ -103,7 +101,7 @@
                         <a class="nav-link " aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link active" href="about.html">About</a>
                     </li>
                     <li class="nav-item dropdown menu-area">
                         <a class="nav-link dropdown-toggle" href="#" id="mega-one" role="button"
@@ -160,6 +158,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="category.html">Organic Food</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="service.html">Services</a>
                     </li>
@@ -167,21 +166,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+
                 </ul>
-
                 <div class="nav-icons d-none d-lg-flex">
-
                     <div class="nav-images" id="search-icons">
                         <i class="fas fa-search"></i>
+
                     </div>
                     <a href="wishlist.html" class="nav-images">
                         <i class="fas fa-heart"></i>
                         <span class="wish-count">0</span>
+
                     </a>
                     <a href="cart.html" class="nav-images">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="wish-count">0</span>
+
                     </a>
+
                 </div>
             </div>
         </div>
@@ -189,61 +191,136 @@
 
     <!-- Navbar End -->
 
-    <!-- Buy Section Start  -->
+    <!--/////////////////// Search form ///////////////////// -->
 
-    <section class="buy-section">
-        <div class="buy-container container">
-            <div class="buy-form cart-detailed-container">
-                <h3>Checkout</h3>
-                <form>
-                    <div class="form-box-1">
-                        <input type="text" name="" placeholder="Name">
-                        <input type="number" name="" placeholder="Phone Number">
-                    </div>
-                    <textarea name="" id="" cols="30" rows="3" placeholder="Address"></textarea>
-                    <div class="form-box-1">
-                        <input type="email" name="" placeholder="Email">
-                        <input type="text" placeholder="City">
-                    </div>
-                    <div class="form-box-1">
-                        <input type="text" placeholder="State">
-                        <input type="text" placeholder="Zip">
-                    </div>
-                    <button type="submit">Place a Order</button>
-                </form>
+    <!-- Mobile View Search Form -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search..." name="" id="search-box">
+        <button type="submit" class="search">
+            <i class="fas fa-search "></i>
+        </button>
+        <label for="search-box"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <!-- Desktop View Search Form -->
+
+    <form action="" id="search-forms">
+        <input type="search" placeholder="Search..." name="" id="search-boxs">
+        <button type="submit" class="search">
+            <i class="fas fa-search "></i>
+        </button>
+        <label for="search-boxs"></label>
+        <i class="fas fa-times" id="closes"></i>
+    </form>
+
+    <!--///////////////////// Search form End /////////////// -->
+
+    
+    <!-- Hero Section Start -->
+    <section class="hero-section">
+        <div class="hero-section-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate__animated animate__backInLeft" style="animation-delay: 0.5s;">About <span>Us</span>
+            </h1>
+            <p class="animate__animated animate__backInLeft" style="animation-delay: 1s;">Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. A adipisci quo iste consequatur recusandae veritatis.</p>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    
+
+    <!-- about section start -->
+
+    <section class="about " id="about">
+        <div class="about-over-container container">
+            <div class="about-title">
+
+                <h5 class="about-sub-heading">About us</h5>
+                <h2 class="about-heading">Why choose <span>us?</span> </h2>
             </div>
-            <div class="cart-price">
-                <div class="cart-price-title">
-                    <h3>Summary</h3>
-                </div>
-                <div class="cart-price-details">
-                    <div class="cart-price-content">
-                        <div class="cart-price-1">
-                            <span class="cp-title">Price:</span>
-                            <span class="cp-price">₹ 2000</span>
-                        </div>
-                        <div class="cart-price-1">
-                            <span class="cp-title">Delivery:</span>
-                            <span class="cp-price">₹ 4000</span>
-                        </div>
-                    </div>
-                    <div class="cart-price-content">
-                        <div class="cart-price-1">
-                            <span class="cp-title">Total:</span>
-                            <span class="cp-price">₹ 6000</span>
-                        </div>
 
+
+            <div class="about-container">
+
+                <div class="about-image">
+                    <img src="assets/Images/Photos/cute-rabbit-white-background.jpg" alt="">
+                </div>
+
+                <div class="about-content">
+                    <h3>Best Rabbit Farm, Rabbit Blood Hair Oil and Rabbit Blood Pain Relief <span> Oil in Erode</span>
+                    </h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed commodi iure at? Obcaecati officia
+                        quasi,
+                        omnis iure est quos ipsam autem qui! Accusamus aliquam similique vel quos perferendis illum
+                        dolorum?
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse quae voluptatem non? Totam
+                        hic
+                        obcaecati labore provident voluptas dolor, aliquid in vitae, veniam, assumenda velit quis
+                        placeat.
+                        Quod,
+                        quia.</p>
+                    <div class="icons-container">
+                        <div class="icons"><i class="fas fa-shipping-fast"></i>
+                            <span>Free delivery</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Easy Payment</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Service</span>
+                        </div>
                     </div>
-                    <button type="button" class="cart-submit">Go to Checkout</button>
+
+
                 </div>
             </div>
         </div>
+
     </section>
 
-    <!-- Buy Section End -->
+    <!-- about section ends -->
 
 
+     <!--////////////////////////////////// milestones section Start //////////////////////////////// -->
 
+     <section class="milestones-section reveal">
+        <div class="milestones-overlay"></div>
+        <div class="minlestone-container container">
+            <div class="milestone-details">
+                <div class="milestone-content">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="counts" data-val="25+">0</span>
+                    <span class="counts-name">Years of Experience</span>
+                </div>
+                <div class="milestone-content">
+                    <i class="fa-solid fa-person-falling-burst"></i>
+                    <span class="counts" data-val="300">0</span>
+                    <span class="counts-name">PAIN RELIEF OIL SALES</span>
+                </div>
+                <div class="milestone-content">
+                    <i class="fa-solid fa-bottle-droplet"></i>
+                    <span class="counts" data-val="500">0</span>
+                    <span class="counts-name">HAIR OIL SALES</span>
+                </div>
+                <div class="milestone-content milestone-content2">
+                    <i class="fa-solid fa-handshake"></i>
+                    <span class="counts" data-val="150">0</span>
+                    <span class="counts-name">HAPPY CUSTOMERS</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--////////////////////////////////// milestones section End //////////////////////////////// -->
+
+
+    
     <hr>
 
     <!-- Footer Start -->
@@ -352,58 +429,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -416,31 +442,9 @@
     <!-- Jquery elements  -->
     <script src="assets/JS/jquery.js"></script>
 
+    <!-- Owl Carousel Elements -->
+    <script src="assets/JS/owl.carousel.min.js"></script>
 
-
-    <!-- Swiper  -->
-
-    <script>
-        <!-- Initialize Swiper -->
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true
-        });
-        var swiper2 = new Swiper(".mySwiper2", {
-            loop: true,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            },
-            thumbs: {
-                swiper: swiper
-            }
-        });
-    </script>
 
     <!-- //////////////For What we do //////////// -->
 
@@ -462,7 +466,7 @@
                         items: 2
                     },
                     1000: {
-                        items: 4
+                        items: 3
                     }
                 }
             }
@@ -529,8 +533,6 @@
                     reveals[i].classList.remove('active');
                 };
 
-
-
             };
         };
         const observer = new IntersectionObserver(reveal, options);
@@ -538,43 +540,69 @@
 
 
 
-
-        // carousel intervel 
-        let scrollArrow = document.querySelector(".up-arrow");
-
-        window.addEventListener('scroll', () => {
-
-            const scrollY = window.scrollY;
-            const scrollThreshold = 0;
-
-
-
-
-            if (scrollY > scrollThreshold) {
-
-                scrollArrow.style.top = "90%";
-
-            } else {
-                scrollArrow.style.top = "-20%";
-            }
-
-        });
-
     </script>
 
 
 
+    <!--///////////////// jquery Script for button Styling //////////////// -->
 
 
+    <script>
+        $(document).ready(function () {
+            $(".fa-regular").click(function () {
 
+                if ($(this).hasClass('fa-regular')) {
+                    // Do something if class exists
+                    $(this).removeClass("fa-regular");
+                    $(this).addClass("fa-solid");
+                } else {
+                    // Do something if class does not exist
+                    $(this).removeClass("fa-solid");
+                    $(this).addClass("fa-regular");
+                }
+
+
+                // $(this).addClass("fa-solid");
+                // $(".fa-solid").removeClass("fa-regular")
+
+
+            })
+
+
+        })
+
+    </script>
 
 
     <!-- iconicons  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </li>
 
 
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
 
+ -->
+
+    <!--  <h1 class="animate__animated animate__backInLeft" style="animation-delay: 3s;">An animated element</h1>
+ -->
+
+
+    
 </body>
-
 </html>
