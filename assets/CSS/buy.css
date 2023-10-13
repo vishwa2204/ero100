@@ -67,15 +67,17 @@
 
 .buy-form form .form-box-1 input{
     width: 49%;
+    border-radius: 10px;
     padding: 2%;
     margin-bottom: 3%;
-    background-color: var(--light);
+    border: 1px solid var(--black);
 }
 
 .buy-form form textarea{
-    background-color: var(--light);
     padding: 1%;
+    border: 1px solid var(--black);
     margin-bottom: 3%;
+    border-radius: 10px;
     width: 100%;
 
 }
@@ -85,6 +87,7 @@
     background-color: var(--color);
     color: var(--white);
     width: 50%;
+    border-radius: 10px;
 }
 
 
