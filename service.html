@@ -402,7 +402,7 @@
                 </div>
             </div>
 
-            <button type="button" onclick="order();" class="btn">
+            <button type="button" onclick="order1();" class="btn">
                 <span class="btn-1"></span>
                 <span class="btn-2"><span>Send Now</span><i class="fa-brands fa-telegram"></i></span>
                 <span class="btn-3"></span>
@@ -694,6 +694,51 @@
 
     <!--  <h1 class="animate__animated animate__backInLeft" style="animation-delay: 3s;">An animated element</h1>
  -->
+
+ <script>
+    
+function order1() {
+    var orderName = document.getElementById("orderName").value;
+    var orderNumber = document.getElementById("orderNumber").value;
+    var orderVal = document.getElementById("orederVal").value;
+    var orderVal2 = document.getElementById("order2").value;
+    var qty = document.getElementById("Qty").value;
+    var date = document.getElementById("dates").value;
+    var orderAddress = document.getElementById("orderAddress").value;
+    var orderMessagSe = document.getElementById("orderMessage").value;
+
+    if (orderName == "" ||
+        orderNumber == "" || orderVal == "" || orderVal2 == "" || qty == "" || date == "" || orderAddress == "" || orderMessagSe == "") {
+        alert("Enter All Fields");
+
+    } else {
+
+
+        // Format the message content
+        var formattedMessage = encodeURIComponent(
+            " *Name* : " + orderName + "\n" +
+            " *Mobile Number* : " + orderNumber + "\n" +
+            " *Main Order* : " + orderVal + "\n" +
+            " *Secondary* : " + orderVal2 + "\n" +
+            " *Quandity* : " + qty + "\n" +
+            " *Date and Time* : " + date + "\n" +
+            " *Address* : " + orderAddress + "\n" + 
+            " *Message* : " + orderMessagSe);
+
+        // Encode the message for the URL
+        //   var encodedMessage = encodeURIComponent(formattedMessage);
+
+        // Construct the WhatsApp URL
+        var url = "https://wa.me/+919342229700?text=" + formattedMessage;
+
+        // Open the WhatsApp URL in a new tab/window
+        window.open(url, 'black');
+
+
+    }
+}
+
+ </script>
 
 
     

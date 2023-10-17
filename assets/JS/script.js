@@ -47,22 +47,38 @@ function whatsapp() {
     var phone = document.getElementById("phone").value;
     var message = document.getElementById("message").value;
 
-    // Format the message content
-    var formattedMessage = encodeURIComponent(
-        " *Name* : " + name + "\n" +
-        " *Email* : " + email + "\n" +
-        " *Phone* *Number* : " + phone + "\n" +
-        " *Message* : " + message);
+    if (name == "") {
+        alert("Please Fill the Name");
+    } else if (email == "") {
+        alert("Please Fill the Email");
+    }
+    else if (phone == "") {
+        alert("Please Fill the Phone Number");
+    } else if (message == "") {
+        alert("Please Enter Some Message");
+    }
 
-    // Encode the message for the URL
-    //   var encodedMessage = encodeURIComponent(formattedMessage);
+    else {
 
-    // Construct the WhatsApp URL
-    var url = "https://wa.me/+919342229700?text=" + formattedMessage;
 
-    // Open the WhatsApp URL in a new tab/window
-    window.open(url, 'black');
-}
+
+        // Format the message content
+        var formattedMessage = encodeURIComponent(
+            " *Name* : " + name + "\n" +
+            " *Email* : " + email + "\n" +
+            " *Phone* *Number* : " + phone + "\n" +
+            " *Message* : " + message);
+
+        // Encode the message for the URL
+        //   var encodedMessage = encodeURIComponent(formattedMessage);
+
+        // Construct the WhatsApp URL
+        var url = "https://wa.me/+919342229700?text=" + formattedMessage;
+
+        // Open the WhatsApp URL in a new tab/window
+        window.open(url, 'black');
+    }
+};
 
 // Order Deetails 
 
@@ -74,28 +90,37 @@ function order() {
     var qty = document.getElementById("Qty").value;
     var date = document.getElementById("dates").value;
     var orderAddress = document.getElementById("orderAddress").value;
-    var orderMessage = document.getElementById("orderMessage").value;
+    var orderMessagSe = document.getElementById("orderMessage").value;
 
-    // Format the message content
-    var formattedMessage = encodeURIComponent(
-        " *Name* : " + orderName + "\n" +
-        " *Mobile Number* : " + orderNumber + "\n" +
-        " *Main Order* : " + orderVal + "\n" +
-        " *Secondary* : " + orderVal2 + "\n" +
-        " *Quandity* : " + qty + "\n" +
-        " *Date and Time* : " + date + "\n" +
-        " *Address* : " + orderAddress + "\n" + +"\n" +
+    if (orderName == "" ||
+        orderNumber == "" || orderVal == "" || orderVal2 == "" || qty == "" || date == "" || orderAddress == "" || orderMessagSe == "") {
+        alert("Enter All Fields");
 
-        " *Message* : " + orderMessage);
+    } else {
 
-    // Encode the message for the URL
-    //   var encodedMessage = encodeURIComponent(formattedMessage);
 
-    // Construct the WhatsApp URL
-    var url = "https://wa.me/+919342229700?text=" + formattedMessage;
+        // Format the message content
+        var formattedMessage = encodeURIComponent(
+            " *Name* : " + orderName + "\n" +
+            " *Mobile Number* : " + orderNumber + "\n" +
+            " *Main Order* : " + orderVal + "\n" +
+            " *Secondary* : " + orderVal2 + "\n" +
+            " *Quandity* : " + qty + "\n" +
+            " *Date and Time* : " + date + "\n" +
+            " *Address* : " + orderAddress + "\n" + +"\n" +
+            " *Message* : " + orderMessagSe);
 
-    // Open the WhatsApp URL in a new tab/window
-    window.open(url, 'black');
+        // Encode the message for the URL
+        //   var encodedMessage = encodeURIComponent(formattedMessage);
+
+        // Construct the WhatsApp URL
+        var url = "https://wa.me/+919342229700?text=" + formattedMessage;
+
+        // Open the WhatsApp URL in a new tab/window
+        window.open(url, 'black');
+
+
+    }
 }
 
 
